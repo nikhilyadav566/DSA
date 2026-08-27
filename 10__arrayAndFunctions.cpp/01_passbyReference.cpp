@@ -23,3 +23,14 @@ int main(){
 //  Output
 //  100
 //  100
+
+//  After calling change() from main()
+//   it goes to change(int arr[]) 
+//    and inside it we change the element of 0th index
+//      which is equal 100
+//        And in change() ->cout->0th index element then output will be 100 but 
+//   it will be also same while it will called from main function.
+
+//    Now if we cout from main()
+//        then its output will be 100
+
