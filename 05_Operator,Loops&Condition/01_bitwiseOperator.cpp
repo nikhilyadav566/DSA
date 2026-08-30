@@ -4,7 +4,7 @@
 // 3. NOT   ~      (in logical operator we study this is '!' NOT operator but in Bitwise '~'this is NOT operator which is called tilda) but same work.
 // 4. XOR   ^
 
-// in XOR operator -> output will be different on same value.
+// in XOR operator -> output will be same on same value.
 
 //  like as
 //   a b  XOR

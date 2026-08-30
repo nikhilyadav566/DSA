@@ -21,6 +21,8 @@ int main(){
         cout<<arr[i]<< " ";
     }
 
+    cout<<endl;
+
     
 
 

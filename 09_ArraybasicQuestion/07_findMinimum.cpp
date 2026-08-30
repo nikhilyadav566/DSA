@@ -26,7 +26,7 @@ int main(){
     }                           //  Note : -> As we know that if the codition is true -> execute the code inside if
                                //            If the condition is false -> skip / ignore the code inside if
 
-    cout<<"Minimum: "<<min<<endl;     //  here print miin
+    cout<<"Minimum: "<<min<<endl;     //  here print min
 
 
     return 0;
