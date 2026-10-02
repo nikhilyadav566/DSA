@@ -14,7 +14,7 @@
     int end = arr.size()-1;
     int i = 0;
 
-    while(i != end){
+    while(i <= end){
 
         if(arr[i]==0){
             swap(arr[start], arr[i]);

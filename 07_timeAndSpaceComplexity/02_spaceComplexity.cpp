@@ -1,6 +1,6 @@
 // What is Space Coplexity?
 
-==> Amount of space taken by an algorithm to run as a function of lenght of input.
+// ==> Amount of space taken by an algorithm to run as a function of lenght of input.
 
 // Ques:1  int a = 1;   // variable
 //         int b[5];   // array

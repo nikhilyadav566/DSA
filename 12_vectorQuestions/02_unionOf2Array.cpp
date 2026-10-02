@@ -21,7 +21,7 @@ int main(){
     for(int i=0; i<arr.size(); i++){
         for(int j=0; j<brr.size(); j++){
             if(arr[i] == brr[j]){
-                brr[j] = INT_MIN;        //skip
+                brr[j] = INT_MIN;        //  here INT_MIN replaced brr[j] elements which are matched to the arr[i] elements
                 break;
             }
         }
@@ -60,3 +60,34 @@ int main(){
 // Step4:-> Add only unmarked elements form second array
 
 
+
+
+//     How does this loop actually works
+
+//  Find duplicates and mark them
+    // for(int i=0; i<arr.size(); i++){
+    //     for(int j=0; j<brr.size(); j++){
+    //         if(arr[i] == brr[j]){
+    //             brr[j] = INT_MIN;        
+    // }
+
+
+    // 1. The outer loop selects one elements from  the first array(arr) at a time 
+
+    // 2. For every element selected from arr, the inner loop compares it with every element
+    //         of the second array(brr).
+
+    // 3. If arr[i] == brr[j], it means a common element is found.
+    
+    // 4. After find a match, brr[j] is replaced with INT_MIN. 
+
+    // 5. INT_MIN does not actually skip the element or control the loop.
+
+    // 6. It is only used as a marker to indicate that the matched element has already been used . 
+
+    // 7. When the same position of brr is checked again later, its original value has been replaced
+    //     by INT_MIN, so it normally will not match again.
+
+    // 8. The inner loop still visits that index; however, the condition arr[i] == brr[i] becomes false.
+    
+    // 9. After the inner loop completes all comparisons, the outer loop moves to the next element of arr.

@@ -11,7 +11,7 @@
 //          OR
 //    vector<int> arr(10, -1);
 
-//    suppose i want to create 'n' size of vectore by taking input at runtime and create array.
+//    suppose i want to create 'n' size of vector by taking input at runtime and create array.
 //  like this:-
 //              int n;
 //              cin>>n;

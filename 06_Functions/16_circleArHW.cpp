@@ -25,3 +25,8 @@ int main(){
 
         return 0;
 }
+
+
+// Enter radius
+// 3
+// The area of circle is 28.2743

@@ -23,3 +23,10 @@ int main(){
 
    return 0;
 } 
+
+
+//  Output
+
+//   Enter nth no.
+//       6
+//   The sum of even no is 12    

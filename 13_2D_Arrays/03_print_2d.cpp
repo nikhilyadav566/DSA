@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 
-    int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};   // here first arr[3] showing row no -> and second [3] -> showing column no.
 
     cout<<arr[2][2]<<endl;    // Output -> 9
 

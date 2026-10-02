@@ -5,7 +5,7 @@ using namespace std;
 
 
 int reverseInteger(int n){
-int rem=0, ans=0;
+int ans=0;
 
 while(n>0){
     int digit = n%10;
@@ -29,3 +29,8 @@ int main(){
 
     return 0;
 }
+
+// Enter integer no
+// 2698
+// 8962
+

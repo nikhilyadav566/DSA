@@ -49,5 +49,5 @@ int main(){
 
 //  Start from 2
 //  Check up num-1
-//  one exact divisor -> Not Prime, none -> Prme
+//  one exact divisor -> Not Prime, none -> Prime
 

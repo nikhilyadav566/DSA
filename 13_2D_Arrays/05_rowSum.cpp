@@ -28,12 +28,12 @@ int main(){
     for(int i=0; i<a; i++){
         int sum =0;                               //intialise sum and assign sum =0;
         for(int j=0; j<b; j++){
-             cout<<arr[i][j]<<" ";
-            // sum = sum+arr[i][j];                     
+            //  cout<<arr[i][j]<<" ";
+            sum = sum+arr[i][j];                     
            
         }
-        cout<<endl;
-        // cout<<"Row sum = "<<sum<<endl;            //     print sum
+        // cout<<endl;
+        cout<<"Row sum = "<<sum<<endl;            //     print sum
     }
 
 

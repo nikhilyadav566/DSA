@@ -1,4 +1,4 @@
-// sort 1's , 2's and 3 
+// sort 1's And 2's
 
 #include<iostream>
 #include<vector>
@@ -13,14 +13,14 @@ int main(){
     int end = arr.size()-1;
     int i = 0;
 
-    while(i<end){
+    while(i<=end){
 
         if(arr[i]==1){
             swap(arr[start],arr[i]);
             start++;
             i++;
         }
-        if(arr[i]==2){
+        else if(arr[i]==2){
             swap(arr[end],arr[i]);
             end--;
         }
