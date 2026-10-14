@@ -15,14 +15,19 @@ for(int i=0; i<arr.size(); i++){
     int index = abs(arr[i]);
 
     //  visited
-    if(arr[index]<0){
+    if(arr[index-1]<0){
         cout<<"Duplicate no = "<<index<<endl;
     }
     // not visited
     else{
-        arr[index] = -arr[index];
+        arr[index-1] *= -1;
     }
 }
 
+
     return 0;
 }
+
+//      OUTPUT
+
+// Duplicate no = 2

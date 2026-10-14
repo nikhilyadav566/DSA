@@ -74,7 +74,7 @@ int main(){
 
 
 //     Step:1  ->  Intialize max
-//                int max = arr[10];
+//                int max = arr[0];
 //                arr[0] is 10.
 
 //                So: max = 10

@@ -23,7 +23,7 @@ int main(){
         if(arr[i]>0){
             positive++;
         }
-        else{
+        else if(arr[i]<0){
             negative++;
         }
     }
@@ -35,8 +35,8 @@ int main(){
 }
 
 // Enter size of elements
-// 4 
+// 5 
 // Enter elements
-// 4 -6 8 -2
+// 4 -6 8 -2 0
 // Positive = 2
 // Negative = 2

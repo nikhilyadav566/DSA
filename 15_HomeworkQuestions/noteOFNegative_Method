@@ -1,0 +1,352 @@
+/*
+===========================================================
+        NEGATIVE MARKING / VISITED METHOD
+===========================================================
+
+Use this method when:
+
+1. Array values are in the range 1 to n.
+2. We want to find duplicate/repeating elements
+   or sometimes missing elements.
+
+Example:
+
+    arr = {1, 3, 4, 2, 2}
+
+Here n = 5
+
+-----------------------------------------------------------
+1. IMPORTANT MAPPING
+-----------------------------------------------------------
+
+C++ array index starts from 0.
+
+So we map:
+
+    Value 1  -> index 0
+    Value 2  -> index 1
+    Value 3  -> index 2
+    Value 4  -> index 3
+    Value 5  -> index 4
+
+Therefore:
+
+    value -> index
+
+    index = value - 1
+
+That's why we use:
+
+    arr[index - 1]
+
+-----------------------------------------------------------
+2. WHY abs()?
+-----------------------------------------------------------
+
+During this method, we change some numbers to negative.
+
+Example:
+
+    5 becomes -5
+
+But we still need to know that the original value was 5.
+
+So:
+
+    abs(5)  = 5
+    abs(-5) = 5
+
+Therefore:
+
+    int index = abs(arr[i]);
+
+means:
+
+    "Give me the original positive value."
+
+-----------------------------------------------------------
+3. MAIN IDEA
+-----------------------------------------------------------
+
+We use NEGATIVE and POSITIVE signs as a VISITED marker.
+
+    Positive  = not visited yet
+    Negative  = already visited
+
+We don't need a separate visited[] array.
+
+-----------------------------------------------------------
+4. THE MAIN CODE
+-----------------------------------------------------------
+
+    int index = abs(arr[i]);
+
+    if(arr[index - 1] < 0) {
+
+        // Already negative
+        // It means this value was already visited
+        // Therefore this value is repeating/duplicate
+
+    }
+    else {
+
+        // First time seeing this value
+        // Mark its position as visited
+        arr[index - 1] *= -1;
+    }
+
+-----------------------------------------------------------
+5. EXAMPLE
+-----------------------------------------------------------
+
+Array:
+
+    {1, 3, 4, 2, 2}
+
+Start:
+
+    1   3   4   2   2
+
+-----------------------------------------------------------
+i = 0
+
+arr[i] = 1
+
+index = abs(1)
+index = 1
+
+index - 1 = 0
+
+Check:
+
+    arr[0]
+
+It is positive.
+
+So mark it negative:
+
+    arr[0] *= -1
+
+Array becomes:
+
+   -1   3   4   2   2
+
+Meaning:
+
+    "1 has been visited."
+
+-----------------------------------------------------------
+i = 1
+
+arr[i] = 3
+
+index = abs(3)
+index = 3
+
+index - 1 = 2
+
+Check:
+
+    arr[2]
+
+It is positive.
+
+Mark it negative:
+
+    -1   3  -4   2   2
+
+Meaning:
+
+    "3 has been visited."
+
+-----------------------------------------------------------
+i = 2
+
+arr[i] = 4
+
+index = abs(4)
+index = 4
+
+index - 1 = 3
+
+Check:
+
+    arr[3]
+
+It is positive.
+
+Mark it:
+
+    -1   3  -4  -2   2
+
+Meaning:
+
+    "4 has been visited."
+
+-----------------------------------------------------------
+i = 3
+
+arr[i] = 2
+
+index = abs(2)
+index = 2
+
+index - 1 = 1
+
+Check:
+
+    arr[1]
+
+It is positive.
+
+Mark it:
+
+    -1  -3  -4  -2   2
+
+Meaning:
+
+    "2 has been visited."
+
+-----------------------------------------------------------
+i = 4
+
+arr[i] = 2
+
+index = abs(2)
+index = 2
+
+index - 1 = 1
+
+Check:
+
+    arr[1]
+
+But arr[1] is already negative:
+
+    -3
+
+Therefore:
+
+    2 has already been visited.
+
+So:
+
+    2 is the duplicate/repeating element.
+
+-----------------------------------------------------------
+6. EASY WAY TO REMEMBER
+-----------------------------------------------------------
+
+Think like this:
+
+        VALUE
+          |
+          ↓
+      abs(value)
+          |
+          ↓
+      value - 1
+          |
+          ↓
+       INDEX
+          |
+          ↓
+    Check the sign
+          |
+       ┌──┴──┐
+       ↓     ↓
+   Positive Negative
+       ↓     ↓
+    First     Already
+    visit     visited
+       ↓         ↓
+    Make       Duplicate /
+   negative    Repeating
+
+-----------------------------------------------------------
+7. CODE FOR FINDING ONE DUPLICATE
+-----------------------------------------------------------
+
+    vector<int> arr{1, 3, 4, 2, 2};
+
+    for(int i = 0; i < arr.size(); i++) {
+
+        int index = abs(arr[i]);
+
+        if(arr[index - 1] < 0) {
+
+            cout << "Duplicate = " << index << endl;
+            break;
+
+        }
+        else {
+
+            arr[index - 1] *= -1;
+
+        }
+    }
+
+-----------------------------------------------------------
+8. CODE FOR FINDING ALL REPEATING ELEMENTS
+-----------------------------------------------------------
+
+    vector<int> arr{1, 3, 4, 2, 2, 3};
+
+    for(int i = 0; i < arr.size(); i++) {
+
+        int index = abs(arr[i]);
+
+        if(arr[index - 1] < 0) {
+
+            cout << "Repeating element = "
+                 << index << endl;
+
+        }
+        else {
+
+            arr[index - 1] *= -1;
+
+        }
+    }
+
+Difference:
+
+    ONE duplicate:
+        use break
+
+    ALL repeating elements:
+        don't use break
+
+-----------------------------------------------------------
+9. MOST IMPORTANT RULE
+-----------------------------------------------------------
+
+This method is mainly used when:
+
+    Values are in the range 1 to n.
+
+For example:
+
+    {1, 3, 5, 3, 4}     ✅
+
+But:
+
+    {3, 4, 5, 7, 9}     ❌
+
+if n = 5,
+
+because 7 and 9 cannot be converted into valid
+indexes using this method.
+
+-----------------------------------------------------------
+10. ONE LINE TO REMEMBER
+-----------------------------------------------------------
+
+    "The value tells me which position to visit."
+
+    "Positive = first visit."
+
+    "Negative = already visited."
+
+===========================================================
+*/

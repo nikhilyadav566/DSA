@@ -1,6 +1,6 @@
 // Find Unique element
 
-// Given an array of integers in which every element appears exactly twice except for one element that appears only oncce, 
+// Given an array of integers in which every element appears exactly twice except for one element that appears only once, 
  //  find that unique element 
 
 #include<iostream>

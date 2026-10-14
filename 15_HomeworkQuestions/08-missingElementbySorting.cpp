@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
 
-    vector<int> arr{1,3,4,4,2};   // 1 2 4 5 5
+    vector<int> arr{1,3,4,4,2};   // 1 2 3 4 4
 
     sort(arr.begin(), arr.end());
 
