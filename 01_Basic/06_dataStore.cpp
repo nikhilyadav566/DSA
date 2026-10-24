@@ -23,7 +23,7 @@
 // "leading zeros".
 
 // For a positive number:
-// MSB (Most Significant Bit) = 0         means first bit no will be 0
+// MSB (Most Significant Bit) = 0         means first bit number will be 0
 
 // If the first (leftmost) bit is 0,
 // the number is positive / non-negative.
@@ -59,7 +59,7 @@
 // Step 3: Add 1
 //
 //         11111111 11111111 11111111 11111010
-//                                      + 1
+//                                      +    1
 //         -----------------------------------
 //         11111111 11111111 11111111 11111011
 //
@@ -69,7 +69,7 @@
 //         -5 = 11111111 11111111 11111111 11111011
 //
 // For a negative number:
-// MSB = 1       firs bit no. will be 1
+// MSB = 1       first bit no. will be 1
 
 // If the first (leftmost) bit in memory is 1,
 // the number is negative.

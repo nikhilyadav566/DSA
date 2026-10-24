@@ -10,7 +10,7 @@
  int main(){
 
  // 1. Implicit
-    char ch = 97;         // here the value is in integer datatype and store in chat
+    char ch = 97;         // here the value is in integer datatype and store in char
     cout<<ch<<endl ;     // output will be 'a' 
 
     // it convert it's value in character form

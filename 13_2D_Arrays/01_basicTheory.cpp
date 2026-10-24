@@ -190,7 +190,7 @@
 
 // Exactly — if C means number of columns, then:
 
-// C × i + j
+// C × i + j      (and i = row index and j = column index   )
 
 // gives the linear offset of arr[i][j] in row-major order.
 

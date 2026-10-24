@@ -8,17 +8,20 @@ int main(){
 
     vector<vector<int>> arr{{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
 
+    int rows  = arr.size();
+    int cols = arr[0].size();
+
     cout<<"Column-Wise wave print "<<endl;
-    for(int i=0; i<arr.size(); i++){
+    for(int i=0; i<rows; i++){
         if(i%2==0){
             //  Left to right side
-            for(int j=0; j<arr.size(); j++){
+            for(int j=0; j<cols; j++){
                 cout<<arr[i][j]<<" ";
             }
         }
         else{
             // Right to left side
-            for(int j=arr.size()-1; j>=0; j--){
+            for(int j=cols-1; j>=0; j--){
                 cout<<arr[i][j]<<" ";
             }
         }
